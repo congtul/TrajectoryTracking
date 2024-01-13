@@ -1,0 +1,19 @@
+double CalLat2Deg(double Lat)
+{
+	static uint8_t Deg=0;
+static double Min=0,  Result=0;
+	Deg= Lat/100;
+	Min=Lat-Deg*100;
+	Result=Deg+Min/60;
+return  Result; 
+}
+	
+double CalLong2Deg(double Long)
+{
+	static uint16_t Deg=0;
+	static double Min=0,  Result=0;
+	Deg= Long/100;
+	Min=Long-Deg*100;
+	Result=Deg+Min/60;
+return  Result; 
+}
